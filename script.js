@@ -6,6 +6,8 @@
 /*  BONUS: Creare una select con tutti i generi dei dischi. In base a cosa
     scegliamo nella select, vedremo i corrispondenti cd.*/
 
+/* BONUS 2: Ordinare i dischi per anno di uscita */
+
 function init() {
   new Vue({
     el: '#app',
@@ -17,8 +19,6 @@ function init() {
       axios.get('https://flynn.boolean.careers/exercises/api/array/music')
       .then(result => {
         this.disc = result.data.response;
-        console.log(result.data.response);
-        console.log(result);
       })
     }
   })

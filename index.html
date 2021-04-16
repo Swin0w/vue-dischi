@@ -28,8 +28,8 @@
         </select>
       </div>
       <div class="flex-row">
-        <div class="card" v-for="elem in disc" v-if="elem.genre.toUpperCase() == pickGenre.toUpperCase() || pickGenre == 'default'" >
-          <img :src="elem.poster" alt="">
+        <div class="card" v-for="elem in disc" v-if="elem.genre.toUpperCase() == pickGenre.toUpperCase() || pickGenre == 'default'">
+          <img :src="elem.poster" alt="Immagine copertina disco">
           <h2>{{elem.author}}</h2>
           <p>{{elem.title}}</p>
         </div>
