@@ -3,8 +3,12 @@ body{
   margin: 0 auto;
   font-family: 'Mukta', sans-serif;
 }
+#app {
+  display: flex;
+  flex-flow: row wrap;
+}
 .card {
-  display: inline-block;
+  align-self: center;
   margin-right: 20px;
   margin-bottom: 20px;
   background: linear-gradient(#000, #314537);

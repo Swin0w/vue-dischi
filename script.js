@@ -3,6 +3,9 @@
     avremo a disposizione una decina di dischi musicali.
     Utilizzando vue, stampiamo a schermo una card per ogni album.*/
 
+/*  BONUS: Creare una select con tutti i generi dei dischi. In base a cosa
+    scegliamo nella select, vedremo i corrispondenti cd.*/
+
 function init() {
   new Vue({
     el: '#app',
