@@ -17,10 +17,22 @@
   </head>
   <body>
     <div id="app">
-      <div class="card" v-for="elem in disc">
-        <img :src="elem.poster" alt="">
-        <h2>{{elem.author}}</h2>
-        <p>{{elem.title}}</p>
+      <div id="selection">
+        <label for="genere">Scegli un genere:</label>
+        <select  name="genere" v-model="pickGenre">
+          <option value="default">Pick one</option>
+          <option value="pop">Pop</option>
+          <option value="jazz">Jazz</option>
+          <option value="rock">Rock</option>
+          <option value="metal">Metal</option>
+        </select>
+      </div>
+      <div class="flex-row">
+        <div class="card" v-for="elem in disc" v-if="elem.genre.toUpperCase() == pickGenre.toUpperCase() || pickGenre == 'default'" >
+          <img :src="elem.poster" alt="">
+          <h2>{{elem.author}}</h2>
+          <p>{{elem.title}}</p>
+        </div>
       </div>
     </div>
     <script type="text/javascript" src="script.js"></script>

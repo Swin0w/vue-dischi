@@ -3,7 +3,11 @@ body{
   margin: 0 auto;
   font-family: 'Mukta', sans-serif;
 }
-#app {
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
   display: flex;
   flex-flow: row wrap;
 }

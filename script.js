@@ -10,13 +10,15 @@ function init() {
   new Vue({
     el: '#app',
     data: {
+      pickGenre: "default",
       disc: []
     },
     mounted() {
       axios.get('https://flynn.boolean.careers/exercises/api/array/music')
-      .then(data =>{
-        this.disc = data.data.response;
-        console.log(data.data.response);
+      .then(result => {
+        this.disc = result.data.response;
+        console.log(result.data.response);
+        console.log(result);
       })
     }
   })
