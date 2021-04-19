@@ -19,7 +19,20 @@ function init() {
       axios.get('https://flynn.boolean.careers/exercises/api/array/music')
       .then(result => {
         this.disc = result.data.response;
+        console.log(result.data.response);
       })
+    },
+    methods: {
+      orderByYear: function() {
+        let temp = 0;
+        for(var i = 0; i < data.disc; i++){
+          if(this.disc.year[i] > this.disc.year[i + 1]) {
+            temp = this.disc.year[i];
+            this.disc.year[i] = this.disc.year[i + 1];
+            this.disc.year[i + 1] = temp;
+          }
+        }
+      }
     }
   })
 }

@@ -21,14 +21,12 @@ body{
   border-radius: 20px;
   color: white;
   text-align: center;
+  padding: 10px 0;
 }
 .card img {
   width: 200px;
   height: 200px;
 }
-.card h2 {
-  margin-top: -5px;
-}
-.card p{
-  margin-top: -15px;
+.card h2, .card p, .card p:last-child {
+  margin-top: -10px;
 }
